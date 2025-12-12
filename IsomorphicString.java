@@ -8,15 +8,13 @@ class IsomorphicString{
                           return false;
                 }
             }
-            else if(map.containsKey(b.charAt(i))){
-                if((map.get(b.charAt(i))!=a.charAt(i))){
-                          return false;
-                }
+            else if(map.containsValue(b.charAt(i))){
+               return false;
             }
             
             else{
                 map.put(a.charAt(i),b.charAt(i));
-                 map.put(b.charAt(i),a.charAt(i));
+                 
             }
         }
         return true;
