@@ -10,7 +10,7 @@ class noOfSunday{
         }
             int d =6-i;
             int count=0;
-            int sum = d;
+            int tD = d;
             while(sum<=no){
                 count++;
                 sum+=7;

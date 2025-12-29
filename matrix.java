@@ -1,29 +1,44 @@
 import java.util.*;
 class matrix{
-    public  int findMatrix(int[][] matrix){
-        ArrayList<Integer> miniArr=new ArrayList<>();
-        
-        for(int i=0;i<matrix.length;i++){
-            int mini=100000;
-            for(int j=0;j<matrix[i].length;j++){
-           if(matrix[i][j]<mini){
-                mini=matrix[i][j];
-               }
+    public  static List<Integer> findMatrix(int[][] matrix){
+        ArrayList<Integer> maxi=new ArrayList<>();
+        ArrayList<Integer> mini=new ArrayList<>();
+        ArrayList<Integer> res=new ArrayList<>();
+        int rl=matrix[0].length;
+        int cl=matrix.length;
+        for(int i=0;i<cl;i++){
+            int min=Integer.MAX_VALUE;
+            for(int j=0;j<rl;j++){
+                
+                if(matrix[i][j]<min){
+                    min=matrix[i][j];
+                }
+                
             }
-            System.out.println(mini);
-       miniArr.add(mini);
+            mini.add(min);
         }
-       int max=0;
-        for(int i=0;i<miniArr.size();i++){
-            if(miniArr.get(i)>max){
-                max=miniArr.get(i);
+         for(int i=0;i<cl;i++){
+            int max=0;
+            for(int j=0;j<rl;j++){
+                
+                if(matrix[j][i]>max){
+                    max=matrix[j][i];
+                }
+               
             }
+             maxi.add(max);
         }
- return max;
+        for(int i=0;i<maxi.size();i++){
+            if(mini.contains(maxi.get(i))){
+                res.add(maxi.get(i));
+            }
+
+        }
+ return res;
     }
     public static void main(String[] args){
         matrix mat= new matrix();
-        int[][] matrix={{3,4,5},{9,11,13},{15,16,17}};
-        System.out.println("ANS "+mat.findMatrix(matrix));
+        int[][] matrix={{3,4,5},{9,16,13},{16,15,17}};
+        System.out.println(findMatrix(matrix));
     }
 }
