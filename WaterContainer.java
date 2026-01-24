@@ -21,7 +21,7 @@ class WaterContainer{
    }
 
    public static void main(String[] args){
-    int[] height={1,2,3,4,5};
+    int[] height={8,7,2,1};
     System.out.print(maxWater(height));
    }
 }
