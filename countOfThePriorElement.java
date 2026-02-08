@@ -16,3 +16,8 @@ class countOfThePriorElement{
     System.out.println(countPrior(arr));
     }
 }
+
+
+
+
+

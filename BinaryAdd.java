@@ -18,6 +18,9 @@ class BinaryAdd{
           if(sum>=2){
             carry=1;
           }
+          else {
+            carry=0;
+          }
         res.append(sum%2);
         } 
        if(carry==1){ res.append(carry);}

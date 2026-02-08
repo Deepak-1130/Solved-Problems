@@ -16,13 +16,12 @@ class Anagram{
         return true;
      }
      else{
-        return true;
+        return false;
      }
-    //    System.out.print(Arrays.toString(strArr)) ;
     }
     public static void main(String[] args){
-        String str1 ="anagram";
-        String str2="nagaram";
+        String str1 ="gram";
+        String str2="mgar";
      System.out.println(checkAnagram(str1 ,str2));
     }
 }

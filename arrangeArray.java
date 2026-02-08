@@ -9,6 +9,8 @@ class arrangeArray{
     ArrayList<Integer> even = new ArrayList<>();
     ArrayList<Integer> odd = new ArrayList<>();
     int n=arr.length;
+
+    //separte even and odd
     for(int i=0;i<n;i++){
        if(arr[i]%2==0){
         even.add(arr[i]);
@@ -18,6 +20,7 @@ class arrangeArray{
        }
         
     }
+    // odd sort 
     int o=odd.size();
     for(int i =0;i<o;i++){
         for(int j =1;j<o-i;j++){
@@ -28,6 +31,7 @@ class arrangeArray{
                 }
         }
     }
+
     int e =even.size();
     for(int i =0;i<e;i++){
         for(int j =1;j<e-i;j++){
@@ -38,11 +42,12 @@ class arrangeArray{
             }
         }
     }
+    
 odd.addAll(even);
     return odd;
     }
     public static void main(String[] args){
-        int[] arr={2, 1, 3, 5, 4, 6, 7, 9, 8};
+        int[] arr={0, 4, 5, 3, 7, 2, 1};
 
 System.out.println(arrangeArray(arr));
     }

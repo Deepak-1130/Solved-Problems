@@ -14,6 +14,7 @@ class evenDigits{
         }
         return ans;
     }
+    
     public static void main(String[] args){
         int[] arr={11,1000,1000};
         System.out.print(countEven(arr));
