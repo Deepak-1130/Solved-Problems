@@ -1,17 +1,17 @@
 import java.util.*;
 class plusOne{
-    public static int[] plusOne(int[] arr){
-     int n=arr.length;
-     for(int i=n-1;i>=0;i--){
-        if(arr[i]<9){
-            arr[i]++;
-            return arr;
+    public static int[] plusOne(int[] digits) {
+        for(int i=digits.length-1;i>=0;i--){
+            if(digits[i]+1!=10){
+                digits[i]+=1;
+                return digits;
+            }
+            digits[i]=0;
         }
-        arr[i]=0;
-     }
-     int arrn[]=new int[n+1];
-     arrn[0]=1;
-     return arrn;
+        int[] arr = new int[digits.length+1];
+        arr[0]=1;
+        return arr;
+      
     }
     public static void main(String [] args){
         int []arr={9,8,9};

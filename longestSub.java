@@ -1,6 +1,6 @@
 import java.util.*;
-class  longestSub{
-public static int lenghtOfSubString(String s){
+class  LongestSub{
+public static int lengthOfLongestSubstring(String s){
  Set <Character> uniqueSet = new HashSet<>();
  int left = 0;
  int maxLength = 0;
@@ -22,6 +22,6 @@ public static int lenghtOfSubString(String s){
 return maxLength;
 }
 public static void main(String[] args){
-    System.out.print(lenghtOfSubString("pwwkewj"));
+    System.out.print(lengthOfLongestSubstring("pwwkewj"));
 }
 }
